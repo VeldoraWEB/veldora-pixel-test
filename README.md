@@ -1,2 +1,3 @@
 # veldora-pixel-test
-pc, mobile screen pixel test
+### Просмотр
+https://veldoraweb.github.io/veldora-pixel-test/
