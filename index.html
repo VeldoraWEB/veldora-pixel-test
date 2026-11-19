@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Veldora Pixel Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="noiseCanvas" aria-hidden="true"></canvas>
+  <canvas id="cursorCanvas" aria-hidden="true"></canvas>
+
+  <button id="btnEsc" class="esc-btn" type="button" title="Выйти из полноэкранного режима">ESC</button>
+
+  <header class="toolbar" role="banner">
+    <button id="btnFullscreen" type="button" title="Открыть на весь экран">⛶</button>
+    
+    <div class="info" aria-live="polite">
+      <span id="colorInfo">Цвет 1 из 6 · Красный</span>
+    </div>
+    
+    <div class="worker-controls">
+      <label class="control-label">
+        Паттерн:
+        <select id="patternSelect" title="Тип тест-паттерна">
+          <option value="noise" selected>Шум</option>
+          <option value="checker">Шахматка</option>
+        </select>
+      </label>
+      <button id="btnNoise" type="button" title="Сгенерировать паттерн в Web Worker">
+        Тест worker'а
+      </button>
+    </div>
+  </header>
+
+  <div class="hint" id="hint">
+    Клик по экрану - следующий цвет · <kbd>←</kbd> <kbd>→</kbd> - навигация
+  </div>
+
+  <div id="statusBar" class="status-bar" role="status" aria-live="polite"></div>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
